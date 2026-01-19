@@ -1,11 +1,13 @@
+import { Link } from "react-router";
+
 function Header() {
     return (
         <>
-            <div className="header-section">
-                <a href="">Home</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
-                <a href="">Articles</a>
+            <div className="flex gap-8 justify-center mb-20">
+                <Link to='/'>Home</Link>
+                <Link to='/projects'>Projects</Link>
+                <Link to='/contact'>Contact</Link>
+                <Link to='/articles'>Articles</Link>
             </div>
         </>
     );
