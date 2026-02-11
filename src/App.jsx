@@ -1,14 +1,22 @@
 import './App.css'
-import Header from './components/Header'
-import Profile from './components/Profile'
+import { Routes, Route } from 'react-router'
+import MainPage from './pages/MainPage'
+import NotFoundPage from './pages/NotFoundPage'
+import ProjectsPage from './pages/ProjectsPage'
+import ArticlesPage from './pages/ArticlesPage'
+import GenerateArticle from './pages/GenerateArticle'
 
 function App() {
 
   return (
-    <>
-     <Header />
-     <Profile />
-    </>
+    <Routes>
+      <Route path='/' element={ <MainPage/>}/>
+      <Route path='/projects' element={ <ProjectsPage/>}/>
+      <Route path='/articles' element={ <ArticlesPage/>}/>
+      <Route path='/links' element={ <ArticlesPage/>}/>
+      <Route path='/dashboard' element={ <GenerateArticle/>}/>
+      <Route path='*' element={ <NotFoundPage/>}/>
+    </Routes>
   )
 }
 

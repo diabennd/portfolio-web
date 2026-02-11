@@ -8,11 +8,48 @@
 }
 
 a {
+  position: relative;
   font-weight: 500;
-  color: #000;
+  color: #414141;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(64, 64, 65);
+  transition: width 0.25s ease-out;
+  -webkit-transition: width 0.25s ease-out;
+  -moz-transition: width 0.25s ease-out;
+  -ms-transition: width 0.25s ease-out;
+  -o-transition: width 0.25s ease-out;
 }
 
+a:hover::before {
+  color: #2b32bd;
+  width: 100%;
+  /* text-decoration: underline; */
+}
+
+button {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+input {
+  border: 1px solid black;
+}
+
+input[type=date]
+{
+  cursor:pointer;
+}
